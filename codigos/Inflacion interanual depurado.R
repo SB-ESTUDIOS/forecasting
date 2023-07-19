@@ -22,6 +22,8 @@ library(tidyverse)
 library(timetk)
 
 
+current_dir <- dirname(rstudioapi::getActiveDocumentContext()$path)
+setwd(current_dir)
 #Cargando funciones
 source("auxiliares/funciones.R")
 #Para prevenir notación científica

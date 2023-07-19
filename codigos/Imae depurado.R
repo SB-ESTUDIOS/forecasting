@@ -22,6 +22,9 @@ library(tidyverse)
 library(timetk)
 library(xlsx)
 
+
+current_dir <- dirname(rstudioapi::getActiveDocumentContext()$path)
+setwd(current_dir)
 # Esta variable controla si se ejecuta la parte del código que realiza el proceso con la data sintética
 cross_validate_with_synth_data = FALSE
 
