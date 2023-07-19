@@ -27,12 +27,12 @@ cross_validate_with_synth_data = FALSE
 
 
 #Cargando funciones
-source("funciones.R")
+source("auxiliares/funciones.R")
 #Para prevenir notación científica
 options(scipen = 999)
 
 #Cargando data
-remesas <- read.csv("remesas.csv")
+remesas <- read.csv("series/remesas.csv")
 remesas <-remesas%>%select(REMESAS)%>%ts(start = c(2010,1),frequency = 12)
 remesas <-remesas%>%as.zoo()
 

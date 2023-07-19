@@ -25,12 +25,12 @@ library(timetk)
 cross_validate_with_synth_data = FALSE
 
 #Cargando funciones
-source("funciones.R")
+source("auxiliares/funciones.R")
 #Para prevenir notación científica
 options(scipen = 999)
 
 #Cargando la data
-cpi_series <- read.csv("ipc.csv",header = F)
+cpi_series <- read.csv("series/ipc.csv",header = F)
 
 cpi_series <- ts(cpi_series,start = c(1984,1),frequency = 12)
 

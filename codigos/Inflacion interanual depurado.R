@@ -23,12 +23,12 @@ library(timetk)
 
 
 #Cargando funciones
-source("funciones.R")
+source("auxiliares/funciones.R")
 #Para prevenir notación científica
 options(scipen = 999)
 
 #Cargando la series en nivel
-cpi_series <- read.csv("ipc.csv",header = F)
+cpi_series <- read.csv("series/ipc.csv",header = F)
 
 cpi_series <- ts(cpi_series,start = c(1984,1),frequency = 12)
 

@@ -28,11 +28,11 @@ library(timetk)
 cross_validate_with_synth_data = FALSE
 
 #Cargando funciones
-source("funciones.R")
+source("auxiliares/funciones.R")
 #Para prevenir notación científica
 options(scipen = 999)
 #Leyendo la data
-credito <- read.csv("credito.csv")
+credito <- read.csv("series/credito.csv")
 credito <-credito%>%select(DEUDA_TOTAL)%>%ts(start = c(2007,1),frequency = 12)
 credito <-credito%>%as.zoo()
 

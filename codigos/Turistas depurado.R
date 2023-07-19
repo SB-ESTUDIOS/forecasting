@@ -25,9 +25,9 @@ library(timetk)
 cross_validate_with_synth_data = FALSE
 
 #Cargando funciones
-source("funciones.R")
+source("auxiliares/funciones.R")
 
-turistas <- read.csv("turistas.csv")
+turistas <- read.csv("series/turistas.csv")
 turistas <-turistas%>%select(TUR_MENSUAL)%>%ts(start = c(1978,1),frequency = 12)
 
 #Plot de la variable en nivel

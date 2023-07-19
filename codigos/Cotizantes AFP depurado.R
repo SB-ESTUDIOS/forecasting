@@ -24,7 +24,7 @@ library(tidyverse)
 cross_validate_with_synth_data = FALSE
 
 #Extraemos primero la data 
-cotizantes_afp <- read.csv("cotizantes_afp.csv")
+cotizantes_afp <- read.csv("series/cotizantes_afp.csv")
 cotizantes_afp <-cotizantes_afp%>%select(COTIZANTES)%>%ts(start = c(2003,9),frequency = 12)
 
 
@@ -69,7 +69,7 @@ fig <- plot_ly(y=diff(cotizantes_afp_training[,1],12),x=index(diff(cotizantes_af
 fig
 
 
-source("funciones.R")
+source("auxiliares/funciones.R")
 
 #Esta función nos calibra el modelo en el traning set y nos da output de la diagnosis
 fit_arima_diag(cotizantes_afp_training[,1],reg_order=c(2,1,0),seas_order=c(1,1,0))

@@ -125,7 +125,7 @@ sarima_table_function <- function(model_data,l_test_set,forecast_horizon,reg_ord
   model_table$upper_bound_three <-model_table$predicted+3*model_table$standard_deviation
   
   #En esta parte hacemos la parte de los hits
-  source("sd_hit_single.R")
+  source("auxiliares/sd_hit_single.R")
   temporary <- sd_hit_single(model_table,"one")
   model_table <- temporary[[1]]
   
@@ -251,7 +251,7 @@ ets_table_function <- function(model_data,l_test_set,forecast_horizon,model_ets)
     model_table$upper_bound_three <-model_table$predicted+3*model_table$standard_deviation
     
     #Esta parte hace lo de los hits
-    source("sd_hit_single.R")
+    source("auxiliares/sd_hit_single.R")
     temporary <- sd_hit_single(model_table,"one")
     model_table <- temporary[[1]]
     
@@ -515,7 +515,7 @@ ets_table_function_fixed <- function(model_data,l_test_set,forecast_horizon,beta
   model_table$upper_bound_three <-model_table$predicted+3*model_table$standard_deviation
   
   #Hacemos lo de los hits
-  source("sd_hit_single.R")
+  source("auxiliares/sd_hit_single.R")
   temporary <- sd_hit_single(model_table,"one")
   model_table <- temporary[[1]]
   
@@ -630,7 +630,7 @@ regression_forecast_combination_function <- function(models_tables,n_comb_set){
 #models_table: dataframe con las predicciones de todos los modelos individuales
 #n_comb_set: número de interacciones a utilizar para realizar las regresiones
 regression_forecast_combination_complete <- function(models_tables,n_comb_set){
-  source("regression_forecast_combination_function.R")
+  source("auxiliares/regression_forecast_combination_function.R")
   regression_forecast_combination_table <-regression_forecast_combination_function(models_tables,n_comb_set)[[1]]
   weigths <-regression_forecast_combination_function(models_tables,n_comb_set)[[2]] 
   temporary <- list()
@@ -659,7 +659,7 @@ hits_and_sd <- function(model_table){
   
  
   #Creamos los hits
-  source("sd_hit_single.R")
+  source("auxiliares/sd_hit_single.R")
   temporary <- sd_hit_single(model_table,"one")
   model_table <- temporary[[1]]
   
@@ -813,7 +813,7 @@ avg_forecast_combination_function_synthetic <- function(models_table){
 #models_table: dataframe con los modelos con la data sintética
 #n_comb_set:número de interacciones con el que se comienza a hacer las regresiones
 regression_forecast_combination_complete_synthetic <- function(models_tables,n_comb_set){
-  source("regression_forecast_combination_synthetic.R")
+  source("auxiliares/regression_forecast_combination_synthetic.R")
   regression_forecast_combination_table <-regression_forecast_combination_synthetic(models_tables,n_comb_set)
   weigths <-regression_forecast_combination_table[[2]] 
   regression_forecast_combination_table <- regression_forecast_combination_table[[1]]
@@ -842,7 +842,7 @@ hits_and_sd_synthetic <- function(model_table){
   model_table$lower_bound_three <-model_table$predicted-3*model_table$standard_deviation
   model_table$upper_bound_three <-model_table$predicted+3*model_table$standard_deviation
   #Calculando los hits
-  source("sd_hit_single.R")
+  source("auxiliares/sd_hit_single.R")
   temporary <- sd_hit_single(model_table,"one")
   model_table <- temporary[[1]]
   
@@ -1054,7 +1054,7 @@ sarima_table_function2 <- function(model_data,l_test_set,forecast_horizon,reg_or
   model_table$upper_bound_three <-model_table$predicted+3*model_table$standard_deviation
   
   #Calculando los hits
-  source("sd_hit_single.R")
+  source("auxiliares/sd_hit_single.R")
   temporary <- sd_hit_single(model_table,"one")
   model_table <- temporary[[1]]
   

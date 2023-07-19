@@ -22,11 +22,11 @@ library(timetk)
 # Esta variable controla si se ejecuta la parte del código que realiza el proceso con la data sintética
 cross_validate_with_synth_data = FALSE
 
-source("funciones.R")
+source("auxiliares/funciones.R")
 #Para prevenir notación científica
 options(scipen = 999)
 #Leyendo la data
-credito <- read.csv("credito.csv")
+credito <- read.csv("series/credito.csv")
 credito <-credito%>%select(DEUDA_TOTAL)%>%ts(start = c(2007,1),frequency = 12)
 credito <-credito%>%as.zoo()
 

@@ -26,12 +26,12 @@ library(xlsx)
 cross_validate_with_synth_data = FALSE
 
 #Cargando funciones
-source("funciones.R")
+source("auxiliares/funciones.R")
 #Para prevenir notación científica
 options(scipen = 999)
 
 #Cargando la data
-imae_series <- read.xlsx("imae.xlsx",sheetIndex = 1,header = F)
+imae_series <- read.xlsx("series/imae.xlsx",sheetIndex = 1,header = F)
 
 imae_series <- ts(imae_series,start = c(2007,1),frequency = 12)
 
