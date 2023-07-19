@@ -1,0 +1,1 @@
+Estos archivos son los necesarios para evaluar los modelos predictivos para seis variables económicas dominicanas: Cotizantes AFP, IMAE, IPC, Remesas, LLegada de Turistas y Crédito en Moneda Nacional# forecasting
