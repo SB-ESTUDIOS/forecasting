@@ -1,2 +1,2 @@
 Los archivos de este repositorio realizan la validación de modelos predictivos para seis variables dominicanas: Cotizantes AFP, Crédito en Moneda Nacional, IPC, Remesas, Llegada de Turistas e IMAE. Los mismos corresponden al paper "Prediciendo series de tiempo de variables económicas dominicanas" (2023). 
-Los archivos que se deben correr son los .R que tienen la palabra depurado que se encuentran en la carpeta "codigos"
+Los archivos que se deben correr son los .R que tienen la palabra depurado que se encuentran en la carpeta "codigos", por ejemplo "Cotizantes AFP depurado.R". La data a utilizar está en formato csv o xlsx en la carpeta "series". En la carpeta "auxiliares" se encuentran códigos auxiliares.
