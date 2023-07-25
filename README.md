@@ -5,7 +5,7 @@ Las funciones principales que se utilizan para el código correspondiente a cada
 
 Para realizar el proceso para una de las variables se debe hacer los siguiente:
 
-1) Bajar las carpetas codigos, series y auxiliares
+1) Bajar las carpetas "codigos", "series" y "auxiliares"
 2) Correr archivo paquetes.R para instalar la paquetería necesaria
 3) Elegir el código de la variable de su elección que tiene la palabra "depurado".
 4) Correr dicho archivo
