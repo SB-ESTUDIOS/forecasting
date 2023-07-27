@@ -9,3 +9,5 @@ Para realizar el proceso para una de las variables se debe hacer los siguiente:
 2) Correr archivo paquetes.R para instalar la paquetería necesaria
 3) Elegir el código de la variable de su elección que tiene la palabra "depurado".
 4) Correr dicho archivo
+
+Para ver un ejemplo véase el blog post en [Medium]([URL](https://medium.com/@SB-ESTUDIOS/3aaa3a90437e)https://medium.com/@SB-ESTUDIOS/3aaa3a90437e)
